@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <%= javascript_include_tag 'scroll_command.js', 'data-turbo-track': 'reload', defer: true %>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500&family=Open+Sans:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <title>MS Line &mdash; na vama je da poželite</title>
+  </head>
+  <body class="container">
+    <header class="header">
+      <h3 class="heading-3">Modni studio</h3>
+      <h1 class="heading-1">Ms Line <span>by</span></h1>
+      <h2 class="heading-2">Snježana Vujinović</h2>por
+      <div class="homeBtn" id="myBtn">
+        <a href="#" class="nav__link"><ion-icon name="chevron-up-outline"></ion-icon>
+        </a>
+      </div>
+    </header>
+    <section class="creator" id="creator">
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#front" class="nav__link">Upoznajte nas</a></li>
+          <li class="nav__item"><%= link_to "Gallery ", "/gallery", class:"nav__link" %>  </li>
+          <li class="nav__item"><a href="#proizvodi" class="nav__link">Poručite</a></li>
+          <li class="nav__item"><a href="#kontakt" class="nav__link">Kontakt</a></li>
+        </ul>
+      </nav>
+      <%= image_tag('creator.jpg', class: 'creator__photo') %>
+      <p class="creator__name">Snježana Vujinović</p>
+      <%# -------popup %>
+      <a href="#popup" class="btn creator__btn">Saznajte više</a>
+      <%# -------popup %>
+    </div>
+    <%# ---------------------------------------popup +---------------------------------------%>
+    <div class="popup" id="popup">
+      <div class="popup__content">
+        <a href="#creator" class="popup__close">&times;</a>
+        <div class="popup__box">
+          <h4 class="heading-4 heading-4--pop">Upoznajte osnivača i glavnog dizajnera MS Line studia</h4>
+          <p class="popup__text">Snježana Vujinović rođena je 10.11.1974.godine u Hrvatskom gradu Rijeka u kojem je provela prve dvije godine svog života. Zatim se sa porodicom seli u Prijedor gdje živi i danas. Udana je i majka dvoje djece. Iako nije pohađala škole šivenja i dizajna, taj poziv u njoj se rodio još u djetinjstvu kada su joj lutke i barbike bile glavni modeli. Mnogo godina kasnije, ona odlučuje da se posveti onome što voli i upisuje kurs šivenja kao prvi korak. Više od deceniju života provela je radeći u firmama tekstila gdje je stekla svo potrebno znanje i iskustvo za pokretanje vlastitog biznisa. 2016.godine ostvarila je svoj veliki san da otvori modni studio i MS Line studio je stvoren. Od tad pa do danas svojom kreativnošću i svojim rukama ispunila je snove mnogim damama. Sa svojim kreacijama učestvovala je i na nekoliko modnih revija na kojima je kroz svečane haljine pokazala i svoju avangardnu stranu. Njen moto je posebnost i različitost, i čvrsto se drži uvjerenja da svaka kreacija treba da bude unikatna i neponovljiva, svojstvena osobi koja će je nositi.</p>
+        </div>
+      </div>
+    </div>
+    <%# ---------------------------------------popup +---------------------------------------%>
+  </section>
+  <section class="front" id="front">
+    <h4 class="heading-4 heading-4--light">Kod nas vaše želje postaju stvarnost! </h4>
+    <p class="front__text--1">Modni studio MS Line mjesto je na kojem možete pronaći toaletu za svaku priliku. Svaka vaša želja može se ostvariti. Na vama je da osmislite svoj stajling i uz pomoć naše Snježane i njenog dugogodišnjeg iskustva u ovom poslu, učinićemo da upravo vaša kreacija postane najnošeniji komad u vašem ormaru. Uz njene savjete i vješte ruke garantujemo da ćete biti zadovoljni i da ćete se osjećati kao na crvenom tepihu. 
+    </p>
+    <p class="front__text--2"> Takođe, postoji veliki broj gotovih modela koji čekaju samo na vas! Dođite, pogledajte, probajte i ponesite kreaciju koju sigurno ni jedna druga dama neće posjedovati, jer svaka MS Line kreacija unikatno je djelo. Naravno, sve prepravke već gotovih proizvoda su moguće, ukoliko imate ideju kako da ta kreacija zasjeni sve ostale na tom posebnom događaju. 
+    </p>
+    <p class="front__text--3"> Ne brinite, nismo zaboravili ni naše najmlađe i najslađe drugare i drugarice koji takođe žele da, kao i njihovi roditelji, budu u centru pažnje. Učinićemo da se svaki dječak osjeća kao princ, a svaka djevojčica kao princeza iz bajke. I u ovom slučaju na vama je da li ćete sa vašim princom ili princezom smisliti stajling, ili ćete ih dovesti da odaberu neku od gotovih kreacija samo za njih. Dođite i vidjećete zašto je svaka naša dosadašnja mušterija izašla iz studia sa velikim osmjehom na licu i novom krpicom u rukama.
+    </p>
+  </section>
+  <section class="meni">
+    <h5 class="heading-5">U našoj ponudi možete pronaći sljedeće:</h5>
+    <div class="meni__lista">
+      <%= image_tag('duga.jpg', class: 'meni__slika',alt:"Slika 1") %>
+      <%= link_to "Duge haljine ", "/gallery/dugehaljine", class:"meni__tekst" %>
+      <%= image_tag('kratka.jpg', class: 'meni__slika', alt:"Slika 2") %>
+      <%= link_to "Kratke haljine ", "/gallery/kratkehaljine", class:"meni__tekst" %>
+      <%= image_tag('komplet.jpg', class: 'meni__slika', alt:"Slika 3") %>
+      <%= link_to "Kompleti ", "/gallery/kompleti", class:"meni__tekst" %>
+      <%= image_tag('djecija.jpg', class: 'meni__slika', alt:"Slika 4") %>
+      <%= link_to "Dječiji modeli ", "/gallery/djecijimodeli", class:"meni__tekst" %>
+      <%= image_tag('ostalo.jpg', class: 'meni__slika', alt:"Slika 5") %>
+      <%= link_to "Ostalo ", "/gallery/ostalo", class:"meni__tekst" %>
+    </div>
+  </section>
+  <div class="proizvodi" id="proizvodi">
+    <h4 class="heading-4 heading-4--pr">Recite nam vaše želje</h4>
+    <div class="card">
+      <div class="card__photo card__photo--1">&nbsp;</div>
+      <h5 class="heading-5 heading-5--pr">Gotovi proizvodi</h5>
+      <div class="card__list">
+        <ul class="card__ul">
+          <li class="card__item">Univerzalne mjere: XS - XXL</li>
+          <li class="card__item">Mogućnost manjih prepravki u roku do 24h (suzavanje, skraćivanje...)</li>
+          <li class="card__item">Veće prepravke spadaju u šivenje po vašim mjerama - rok 5 radnih dana</li>
+          <li class="card__item">Preuzimanje lično u prostorijama studia ili dostava na adresu</li>
+          <li class="card__item">Dostava za Prijedor besplatna, za druge gradove 7KM</li>
+        </ul>
+      </div>
+      <a href="#" class="btn card__btn">Poručite!</a>
+    </div>
+    <div class="card">
+      <div class="card__photo card__photo--2">&nbsp;</div>
+      <h5 class="heading-5 heading-5--pr">Po vašim mjerama</h5>
+      <div class="card__list">
+        <ul class="card__ul">
+          <li class="card__item">Mogućnost slanja mjera ili dolazak u studio na mjerenje</li>
+          <li class="card__item">Kroj birate sami - rok izvršenja 5 radnih dana</li>
+          <li class="card__item">Materijal i boja po vašoj želji</li>
+          <li class="card__item">Preuzimanje lično u prostorijama studia ili dostava na adresu</li>
+          <li class="card__item">Dostava za Prijedor besplatna, za druge gradove 7KM</li>
+        </ul>
+      </div>
+  <%= link_to "Poručite ", "/narudzba_po_mjeri", class:"btn card__btn" %>
+
+    </div>
+    <div class="card">
+      <div class="card__photo card__photo--3">&nbsp;</div>
+      <h5 class="heading-5 heading-5--pr">Izmjene i popravke</h5>
+      <div class="card__list">
+        <ul class="card__ul">
+          <li class="card__item">Izmjene i popravke naših proizvoda</li>
+          <li class="card__item">Rok manjih prepravki 12 - 24h</li>
+          <li class="card__item">Rok većih prepravki 24 - 48h</li>
+          <li class="card__item">U slučaju naše pogreške popravak je besplatan</li>
+          <li class="card__item">U slučaju pogrešnog slanja mjera popravak se naplaćuje <br>
+            &nbsp; <br>
+            &nbsp;</li>
+        </ul>
+      </div>
+      <a href="#" class="btn card__btn">Poručite!</a>
+    </div>
+  </div>
+  <div class="kontakt" id="kontakt">
+    <div class="video">
+      <%= video_tag("v-prepravke.mp4",autoplay: true , class:"video__content",mute:"true",controls: "false",loop:"true") %>
+    </div>
+    <h5 class="heading-5 heading-5--kon">Možete nas kontaktirati na sljedeći način:</h5>
+    <div class="kontakt__box">
+      <div class="kontakt__icon-box">
+        <svg class="kontakt__icon">
+          <use xlink:href="img/sprite.svg#icon-map-pin"></use>
+        </svg>
+        <p class="kontakt__text"><span>Adresa:</span> Đure Jakšić 9, Prijedor</p>
+      </div>
+      <div class="kontakt__icon-box">
+        <svg class="kontakt__icon">
+          <use xlink:href="img/sprite.svg#icon-phone-call"></use>
+        </svg>
+        <p class="kontakt__text"><span>Telefon:</span> 065/954-579</p>
+      </div>
+      <div class="kontakt__icon-box">
+        <svg class="kontakt__icon">
+          <use xlink:href="img/sprite.svg#icon-mail"></use>
+        </svg>
+        <p class="kontakt__text"><span>Email:</span> msline_dresses@gmail.com</p>
+      </div>
+      <div class="kontakt__icon-box">
+        <svg class="kontakt__icon">
+          <use xlink:href="img/sprite.svg#icon-facebook"></use>
+        </svg>
+        <p class="kontakt__text"> <span>Facebook:</span><a href="#" class="kontakt__link">MS Line dresses by Snježana Vujinović</a></p>
+      </div>
+      <div class="kontakt__icon-box">
+        <svg class="kontakt__icon">
+          <use xlink:href="img/sprite.svg#icon-instagram"></use>
+        </svg>
+        <p class="kontakt__text"> <span>Instagram:</span><a href="https://www.instagram.com/dresses__msline/" class="kontakt__link">dresses_msline</a></p>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <ul class="nav">
+      <li class="nav__item"><a href="#front" class="nav__link">Upoznaj nas</a></li>
+      <li class="nav__item"><%= link_to "Gallery ", "/gallery", class:"nav__link" %>
+        <li class="nav__item"><a href="#proizvodi" class="nav__link">Naruči</a></li>
+        <li class="nav__item"><a href="#kontakt" class="nav__link">Kontaktiraj nas</a></li>
+      </ul>
+      <p class="copy">
+        &copy; Copyright 2021 by Modni studio MS Line by Snježana Vujinović.
+      </p>
+    </footer>
+  </body>

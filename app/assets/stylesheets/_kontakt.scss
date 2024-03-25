@@ -1,0 +1,78 @@
+.kontakt {
+    grid-column: 2 / span 8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 5rem;
+    position: relative;
+    //margin-top: -7rem;
+    
+
+    .heading-5 {
+        &--kon {
+            align-self: center;
+            justify-self: end;
+            margin-top: 8rem;
+            
+        }
+    }
+    &__box {
+        width: 41%;
+        background-color: rgba($color-3, .80);
+        display: flex;
+        flex-direction: column;
+        row-gap: 2.5rem;
+        padding: 2rem 0;
+        @media screen and (max-width: $laptop) {
+            width: 55%;
+        }
+    }
+
+    &__icon-box {
+        display: grid;
+        grid-template-columns: min-content 1fr;
+        grid-column-gap: 2rem;
+        justify-items: start;
+        align-items: center;
+        padding: 1rem 2rem;
+        
+    }
+    &__icon {
+        height: 3.5rem;
+        width: 3.5rem;
+        fill: $color-2-ll;
+    }
+    &__text,
+    &__link {
+        font-family: $font-p;
+        font-weight: 600;
+        font-size: 1.5rem;
+        word-spacing: 1.5px;
+        text-decoration: none;
+        color: $color-2-ll;
+        @media screen and (max-width: $laptop) {
+            font-size: 1.7rem;
+        }
+    }
+    &__text span {
+        color: $color-1;
+        margin-right: .5rem;
+    }
+    .video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        opacity: .35;
+        overflow: hidden;
+        &__content {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+        
+    }
+}
+

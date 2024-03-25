@@ -1,0 +1,22 @@
+<ul class="headerBar">
+  <div class="backBtn">
+    <a href="/" class="btn-back"><ion-icon name="play-skip-back-outline"></ion-icon>
+    </a>
+  </div>
+  <% if current_page?(:controller => 'gallery', :action => 'show') %>
+    
+  <% else %>
+    <li><%= link_to "Galerija ", "/gallery", class:"" %>
+    </li>
+  <% end %>
+  <li><%= link_to "Duge haljine ", "/gallery/dugehaljine", class:"" %>
+  </li>
+  <li><%= link_to "Kratke Haljine ", "/gallery/kratkehaljine", class:"" %>
+  </li>
+  <li> <%= link_to "Kompleti ", "/gallery/kompleti", class:"" %>
+  </li>
+  <li> <%= link_to "Dječiji modeli ", "/gallery/djecijimodeli", class:"" %>
+  </li>
+  <li> <%= link_to "Ostalo ", "/gallery/ostalo", class:"" %>
+  </li>
+</ul>

@@ -1,0 +1,61 @@
+.headerBar {
+  position: sticky;
+  top: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: hsla(120, 9%, 39%, 0.9);
+  font-size: 2vh;
+  font-weight: 700;
+
+  z-index: 3;
+  
+}
+
+li a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+
+  color: aquamarine;
+  
+}
+
+.backBtn {
+  display: flex;
+  font-size: 4vh;
+  position: sticky;
+  margin-top: 1vh;
+
+  &:hover{
+
+    animation: 1s ease-in-out animationLeft ;
+    animation-iteration-count: 5;
+  }
+
+}
+
+ion-icon {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+
+
+// --------------------
+@keyframes animationLeft {
+  0%{
+    transform: translateX(0rem);
+
+  }
+
+  50%{
+    transform: translateX(-0.5rem);
+
+  }
+
+  100%{
+    transform: translateX(0rem);
+
+  }
+}

@@ -1,0 +1,143 @@
+.creator {
+    grid-column: 8 / span 3;
+    //background-color: $color-2-ll;
+    display: grid;
+    grid-template-columns: minmax(2rem,4rem) repeat(4, 1fr) minmax(2rem,4rem);
+    grid-template-rows:  repeat(6, 1fr) ;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    grid-row-gap: 2rem;
+    z-index: 2;
+    @media screen and (max-width: $tablet) {
+        grid-template-rows:  repeat(4, 1fr) ;
+        grid-column: 9 / span 2;
+        grid-row-gap: 2rem;
+    }
+    
+
+    .nav {
+        grid-row: 1 / span 1;
+        grid-column: 2 / span 4;
+        align-self: start;
+        justify-self: start;
+        margin-top: 2rem;
+        @media screen and (max-width: $laptop) {
+            align-self: center;
+            justify-self: center;
+        }
+        
+        &__list {
+            display: flex;
+            column-gap: 2.5rem;
+            @media screen and (max-width: $laptop) {
+                flex-direction: column;
+                align-items: center;
+                justify-items: center;
+                row-gap: 4rem;
+            }
+        }
+        &__item {
+            list-style: none;
+        }
+        &__link {
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 400;
+            font-size: 1.3rem;
+            color: $color-1;
+            position: relative;
+            padding: .5rem;
+            @media screen and (max-width: $laptop) {
+                font-size: 1.6rem;
+            }
+            &:hover {
+                color: $color-1-d;
+                &::after {
+                    width: 100%;
+                }
+            }
+            &::after {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+                width: 0%;
+                content: "";
+                color: transparent;
+                background-color: $color-1;
+                height: 1px;
+                
+            }
+        }
+        &__link,
+        &__link::after,
+        &__link::before {
+            transition: all .5s;
+        }
+
+    }
+    &__logo {
+        grid-column: 2 / span 4;
+        grid-row: 2 / span 2;
+        width: 70%;
+        border-radius: 10px;
+        justify-self: center;
+        align-self: start;
+    }
+
+    &__photo {
+        width: 8rem;
+        border-radius: 50%;
+        grid-row: 5 / span 1;
+        grid-column: 2 / span 1;
+        align-self: center;
+        margin-left: 2rem;
+        border: 2px solid $color-1-d ;
+        margin-top: 3rem;
+        @media screen and (max-width: $tablet) {
+            grid-row: 4 / span 1;
+            margin-top: 0;
+        }
+    }
+    &__name {
+        grid-column: 3 / span 3;
+        grid-row: 5 / span 1;
+        align-self: center;
+        justify-self: start;
+        font-family: $font-p;
+        font-weight: 600;
+        font-size: 2rem;
+        color: $color-1-d;
+        margin-left: 2rem;
+        text-transform: uppercase;
+        margin-top: 3rem;
+        @media screen and (max-width: $tablet) {
+            grid-row: 4 / span 1;
+            margin-top: 0;
+        }
+    }
+    &__btn {
+        grid-row: 6 / span 1;
+        grid-column: 3 / span 2;
+        align-self: center;
+        @media screen and (max-width: $laptop) {
+            font-size: 1.1rem;
+        }
+        @media screen and (max-width: $tablet) {
+            grid-row: 5 / span 1;
+            grid-column: 2 / span 4;
+            align-self: center;
+            font-size: 1.3rem;
+        }
+       
+
+    }
+    /*.heading-4--light {
+        grid-column: 2 / span 4;
+        grid-row: 4;
+        align-self: end;
+    }*/
+}
+
